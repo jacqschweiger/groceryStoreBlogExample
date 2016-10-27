@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1lD-90-oSU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Aisle 7: Cereal-->
+        <scene sceneID="n6I-Ko-JXP">
+            <objects>
+                <collectionViewController id="c3i-vC-1kT" customClass="Aisle7CollectionViewController" customModule="groceryShopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Icq-l9-Ohq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jnk-dL-4Vj">
+                            <size key="itemSize" width="122" height="192"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cerealBox" id="0i1-SS-2t2" customClass="Aisle7CollectionViewCell" customModule="groceryShopping" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="122" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="122" height="192"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvH-q7-l9Z">
+                                            <frame key="frameInset" minX="4" minY="71" width="192" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaL-WW-ONb">
+                                            <frame key="frameInset" minX="8" width="120" height="190"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="cerealImage" destination="jaL-WW-ONb" id="zvv-PT-d5F"/>
+                                    <outlet property="cerealLabel" destination="KvH-q7-l9Z" id="7RG-W6-1Up"/>
+                                    <segue destination="2YZ-d0-1mj" kind="show" identifier="moveCereal" id="v9u-qM-T5B"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="c3i-vC-1kT" id="nmN-bg-0Yf"/>
+                            <outlet property="delegate" destination="c3i-vC-1kT" id="63T-Sc-8dO"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Aisle 7: Cereal" id="gpc-L8-y0d"/>
+                    <connections>
+                        <outlet property="aisle7Shelves" destination="Icq-l9-Ohq" id="EAX-nO-Z17"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABB-uw-ycK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1927.2" y="-156.07196401799101"/>
+        </scene>
+        <!--End Cap View Controller-->
+        <scene sceneID="bxb-NK-9sy">
+            <objects>
+                <viewController id="2YZ-d0-1mj" customClass="EndCapViewController" customModule="groceryShopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1BR-dW-ig2"/>
+                        <viewControllerLayoutGuide type="bottom" id="5SB-UV-agw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iiz-zj-n50">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="end cap" translatesAutoresizingMaskIntoConstraints="NO" id="jdj-NO-fyU">
+                                <frame key="frameInset" minX="67" minY="92" width="251" height="473"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uhs-qv-TB8">
+                                <frame key="frameInset" minX="146" minY="351" width="92" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZC-mV-K1N">
+                                <frame key="frameInset" minX="100" minY="175" width="138" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="endCapImage" destination="Uhs-qv-TB8" id="ELd-zx-uDC"/>
+                        <outlet property="endCapLabel" destination="EZC-mV-K1N" id="0a5-Xt-nTg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gm8-jg-o09" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2661.5999999999999" y="-156.07196401799101"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3Pf-rT-jBF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1lD-90-oSU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2dS-eW-ZNj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="c3i-vC-1kT" kind="relationship" relationship="rootViewController" id="dxw-3L-Y8s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QNt-PQ-Pgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="-156.07196401799101"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="end cap" width="171" height="306"/>
+    </resources>
+</document>
